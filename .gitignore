@@ -1,4 +1,7 @@
 reddit_jokes*
+backup/
+
+keys.json
 
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
@@ -6,3 +9,6 @@ reddit_jokes*
 # IPython
 profile_default/
 ipython_config.py
+
+post_ids.csv
+subreddit_posts_out.csv
