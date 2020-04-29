@@ -2,11 +2,11 @@
 
 ## Introduction
 
-First and foremost, why [r/Jokes](https://reddit.com/r/jokes)? It struck me while browsing Reddit that this *should* be a goldmine for text analysis. Thousands of posts, each scored and judged by objective redditors.
+First and foremost, why [r/Jokes](https://reddit.com/r/jokes)? It struck me while browsing Reddit that this _should_ be a goldmine for text analysis. Thousands of posts, each scored and judged by objective redditors.
 
 There must be an API to download all this data. Two searches and I find [PRAW: The Python Reddit API Wrapper](https://praw.readthedocs.io/en/latest/). OK, let's set this up - look at some tutorials, use your Reddit to account create an API key to be used in your script...
 
-Now, create a basic script to fetch me the newest 100 posts. Sweet. I need more, though. I need to cycle through id's? How do I do that? Read some more posts. Yeah, it's not going to work like this. 
+Now, create a basic script to fetch me the newest 100 posts. Sweet. I need more, though. I need to cycle through id's? How do I do that? Read some more posts. Yeah, it's not going to work like this.
 
 [Pushshift](https://pushshift.io/) gets thrown around, which should solve my problems, as it crawls and archives most of Reddit. This API allows me to cycle through posts using timestamps as basic url parameters and so I can download quite a lot of posts. Community, please keep Pushshift running.
 
@@ -34,6 +34,6 @@ Conclusion: Double check your scraping scripts - might save you and external API
 
 Why not do the cleanup along the way in the scraping script? I think it adds a lot of overhead. Get the data first, then play with it after. Don't sabotage your script by making it take more time then necessary in between requests.
 
-Merge the `title` and `body` columns since a lot of jokes use the title as the setup for the punchline. Everything to lowercase and keep only alphanumeric characters.
+Merge the `title` and `body` columns since a lot of jokes use the title as the setup for the punchline. Count length, everything to lowercase and keep only alphanumeric characters. Remove stopwords.
 
 ## Step 3: Broad look
