@@ -57,7 +57,13 @@ And scatterplots.
 ![Joke length by score](images/length_by_score.png "Joke length by score")
 ![Joke number of comments by score](images/comments_by_score.png "Joke number of comments by score")
 
-And dirty jokes.
+Top words in top jokes:
+
+```
+says, man, said, one, get, wife, like, back, asks, know, well, asked, would, guy, go, day, woman, two, got, old, time, first, edit, see, people, husband, next, going, went, want, goes, girl, replies, home, could, son, told, little, take, door, replied, good, new, doctor, boy, really, right, oh, father, dad
+```
+
+And about dirty jokes...
 
 ![NSFW scores](images/nsfw_score.png "NSFW scores")
 
