@@ -2,6 +2,7 @@ import pandas as pd
 import re
 import os
 import string
+from datetime import datetime as dt
 from nltk.corpus import stopwords
 
 stop = stopwords.words('english')
@@ -31,8 +32,10 @@ def clean_scrape(df):
     df['title'] = df['title'].apply(clean_text)
     # make it int instead of float
     df['timestamp'] = df['timestamp'].astype(int)
+    # save the year for count evolution
+    df['year'] = df['timestamp'].apply(lambda x: dt.utcfromtimestamp(int(x)).strftime('%Y'))
     # rename the 'title' column
-    df.columns = ['id', 'text', 'length', 'num_comments', 'nsfw', 'score', 'timestamp']
+    df.columns = ['id', 'text', 'length', 'num_comments', 'nsfw', 'score', 'timestamp', 'year']
     return(df)
 
 
